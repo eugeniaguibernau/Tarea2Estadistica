@@ -1,6 +1,19 @@
-# Instalar dependencias:
-# .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+# CREACIÓN DEL ENTORNO VIRTUAL
+# Esto se debe hacer en el directorio raíz (Tarea2Estadistica).
+# python -m venv .venv
+
+# ACTIVACIÓN DEL ENTORNO VIRTUAL
+# Este comando sirve para una terminal Windows PowerShell.
+# .venv\Scripts\Activate.ps1
+
+# INSTALACIÓN DE DEPENDENCIAS
+# pip install -r requirements.txt
+
 matplotlib
 scipy
 pandas
 numpy
+
+# Instalar dependencias:
+# Me da cosa borrar esto, después vemos :)
+# .\.venv\Scripts\python.exe -m pip install -r requirements.txt
