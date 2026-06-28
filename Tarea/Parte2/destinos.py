@@ -97,6 +97,8 @@ def graficarDestinoPie():
 
 tablaFrecuencia = conseguirTablaFrecuenciaDestino()
 
+# Descomentar para ejecutar las funciones deseadas.
+
 # print(tablaFrecuencia)
 # graficarDestinoBarra()
 # graficarDestinoPie()
