@@ -36,9 +36,9 @@ def conseguirTablaFrecuenciaGastoTotal():
     
     tablaFrecuencia = (
         muestra
-        .groupby("intervaloGastos")
+        .groupby("intervaloGastos", observed=False) # Si se cambia el valor de observed a True, se podrá visualizar una tabla resumida con intervalos efectivos
         .agg(frequencia=("GastoTotal", "count"))
-        .sort_values(by='frequencia', ascending=True)
+        .sort_index()
     )
 
     tablaFrecuencia["frecuencia_absoluta_acumulada"] = (
@@ -100,6 +100,7 @@ def conseguirDiagramaDeDispersionGastoTotal():
     plt.show()
 
 tablaFrecuencia = conseguirTablaFrecuenciaGastoTotal()
+print(tablaFrecuencia)
 
 # Descomentar para ejecutar las funciones deseadas.
 

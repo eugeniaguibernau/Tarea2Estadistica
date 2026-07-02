@@ -96,6 +96,7 @@ def graficarDestinoPie():
     plt.show()
 
 tablaFrecuencia = conseguirTablaFrecuenciaDestino()
+print(tablaFrecuencia)
 
 # Descomentar para ejecutar las funciones deseadas.
 
