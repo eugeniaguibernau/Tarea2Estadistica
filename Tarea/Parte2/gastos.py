@@ -65,7 +65,7 @@ def conseguirHistogramaGastoTotal():
     bins = conseguirBins()
 
     fig, ax = plt.subplots(tight_layout=True)
-    counts, bins, patches = plt.hist(valores, bins=bins, rwidth=0.8)
+    counts, bins, patches = plt.hist(valores, bins=bins, rwidth=1)
 
     plt.xticks(bins, rotation=45)
     ax.bar_label(patches, padding=3, label_type="edge")
@@ -93,10 +93,10 @@ def conseguirDiagramaDeDispersionGastoTotal():
     gastosTotales = muestra["GastoTotal"]
     gente = muestra["Gente"]
 
-    plt.scatter(gastosTotales, gente, c = np.sqrt(gastosTotales ** 2 + gente ** 2), alpha=0.3)
+    plt.scatter(gente, gastosTotales, c = np.sqrt(gastosTotales ** 2 + gente ** 2), alpha=0.3)
     plt.title("Diagrama de Dispersión de Gastos Totales y Gente")
-    plt.ylabel("Gente")
-    plt.xlabel("Gastos")
+    plt.ylabel("Gastos")
+    plt.xlabel("Gente")
     plt.show()
 
 tablaFrecuencia = conseguirTablaFrecuenciaGastoTotal()
